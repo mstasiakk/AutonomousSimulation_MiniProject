@@ -29,4 +29,7 @@ intermediates/
 *.iobj
 
 # Others
-AutonomousMiniSim_Project_TemporaryKey
+# Visual Studio / project files to ignore
+packages/
+*.pfx
+*.props
