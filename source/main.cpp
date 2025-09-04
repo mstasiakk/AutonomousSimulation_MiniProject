@@ -54,13 +54,23 @@ int main()
         }
 
 
+        // Rectangle steering
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+            rectangle.move({ -1.f, 0.f });
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+            rectangle.move({ 1.f, 0.f });
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+            rectangle.move({ 0.f, 1.f });
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
+            rectangle.move({ 0.f, -1.f });
 
-        window.clear(sf::Color(127,127,127)); // we need to have a buffer to change a color to prevent displaying incomplete frame 
-        // - double buffering
+
+       
+        // double buffering
+        window.clear(sf::Color::Black); 
         
         //draw rectangle
         window.draw(rectangle);
-
 
         window.display();
     }
